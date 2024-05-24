@@ -19,6 +19,7 @@ module.exports = function (RED) {
     RED.nodes.createNode(this, n);
     this.server = RED.nodes.getNode(n.server);
     this.server.namespace = n.namespace;
+    this.server.transport = n.transport;
     this.name = n.name;
     this.sockets = sockets;
     let node = this;
@@ -125,7 +126,7 @@ module.exports = function (RED) {
     if (config.path != '') {
       options.path = config.path;
     }
-    if (config.transport != '') {
+    if (config.transport) {
       options.transports = config.transport.split(',');
     }
     if (config.namespace) {
