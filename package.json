@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-chi-socketio",
-  "version": "0.4.11",
+  "version": "0.4.13",
   "description": "Node Red client to work with socket.io server",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "node-red",
     "socket.io"
   ],
-  "author": "Isaac Vitor",
+  "author": "DCHI",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dannychi/node-red-contrib-chi-socketio/issues"
