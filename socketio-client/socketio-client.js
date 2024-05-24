@@ -126,7 +126,7 @@ module.exports = function (RED) {
       options.path = config.path;
     }
     if (config.transport != '') {
-      options.transport = config.transport.split(',');
+      options.transports = config.transport.split(',');
     }
     if (config.namespace) {
       uri = path.join(uri, config.namespace);
