@@ -9,6 +9,7 @@ module.exports = function (RED) {
     this.host = n.host;
     this.port = n.port;
     this.path = n.path;
+    this.transports = n.transports;
     this.reconnection = n.reconnection;
   }
   RED.nodes.registerType('socketio-config', SocketIOConfig);
@@ -115,7 +116,8 @@ module.exports = function (RED) {
   function connect(config, force) {
     var uri = config.host;
     var options = {
-      reconnection: config.reconnection
+      reconnection: config.reconnection,
+      transport: config.transport || ["websocket"]
     };
 
     if (config.port != '') {
