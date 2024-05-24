@@ -1,10 +1,11 @@
 {
   "name": "node-red-contrib-chi-socketio",
-  "version": "0.4.15",
+  "version": "0.4.16",
   "description": "Node Red client to work with socket.io server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
