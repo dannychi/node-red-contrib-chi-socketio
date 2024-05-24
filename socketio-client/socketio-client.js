@@ -116,8 +116,7 @@ module.exports = function (RED) {
   function connect(config, force) {
     var uri = config.host;
     var options = {
-      reconnection: config.reconnection,
-      transport: config.transport ? config.transport.split(',') : ["websocket"]
+      reconnection: config.reconnection
     };
 
     if (config.port != '') {
@@ -125,6 +124,9 @@ module.exports = function (RED) {
     }
     if (config.path != '') {
       options.path = config.path;
+    }
+    if (config.transport != '') {
+      options.transport = config.transport.split(',');
     }
     if (config.namespace) {
       uri = path.join(uri, config.namespace);
